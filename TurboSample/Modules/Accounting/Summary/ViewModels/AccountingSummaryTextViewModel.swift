@@ -1,5 +1,5 @@
 //
-//  SummaryTextViewModel.swift
+//  AccountingSummaryTextViewModel.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-07.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SummaryTextViewModel {
+struct AccountingSummaryTextViewModel {
     let text: String
     let height: CGFloat
     let color: UIColor

@@ -1,5 +1,5 @@
 //
-//  SummaryTextView.swift
+//  AccountingSummaryTextView.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-07.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SummaryTextView: UIView {
+final class AccountingSummaryTextView: UIView {
    
     private let label: UILabel = {
         let label = UILabel()
@@ -19,7 +19,7 @@ final class SummaryTextView: UIView {
         return label
     }()
     
-    init(viewModel: SummaryTextViewModel) {
+    init(viewModel: AccountingSummaryTextViewModel) {
         super.init(frame: .zero)
         backgroundColor = viewModel.color
         addSubview(label)

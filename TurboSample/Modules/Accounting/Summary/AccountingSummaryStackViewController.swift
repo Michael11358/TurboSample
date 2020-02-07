@@ -1,5 +1,5 @@
 //
-//  SummaryStackViewController.swift
+//  AccountingSummaryStackViewController.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-07.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class SummaryStackViewController: UIViewController {
+final class AccountingSummaryStackViewController: UIViewController {
     
-    private var views = [Int: SummaryTextView]()
+    private var views = [Int: AccountingSummaryTextView]()
 
     @IBOutlet private var stackView: UIStackView!
     
@@ -24,8 +24,8 @@ final class SummaryStackViewController: UIViewController {
         views[index]?.set(text: text)
     }
     
-    func insert(viewModel: SummaryTextViewModel, at index: Int) {
-        let view = SummaryTextView(viewModel: viewModel)
+    func insert(viewModel: AccountingSummaryTextViewModel, at index: Int) {
+        let view = AccountingSummaryTextView(viewModel: viewModel)
         views[index] = view
         stackView.insertArrangedSubview(view, at: index)
     }

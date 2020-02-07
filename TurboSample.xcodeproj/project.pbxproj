@@ -14,11 +14,11 @@
 		88A3F84023ECAFD0007E67F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F83E23ECAFD0007E67F2 /* LaunchScreen.storyboard */; };
 		88A3F84B23ECAFD0007E67F2 /* TurboSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */; };
 		88A3F85723EDA0F6007E67F2 /* SceneLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */; };
-		88A3F85B23EDA326007E67F2 /* SummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85923EDA326007E67F2 /* SummaryStackViewController.swift */; };
-		88A3F85C23EDA326007E67F2 /* SummaryStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F85A23EDA326007E67F2 /* SummaryStackViewController.xib */; };
-		88A3F85F23EDA5C4007E67F2 /* SummaryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85E23EDA5C4007E67F2 /* SummaryTextView.swift */; };
+		88A3F85B23EDA326007E67F2 /* AccountingSummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */; };
+		88A3F85C23EDA326007E67F2 /* AccountingSummaryStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */; };
+		88A3F85F23EDA5C4007E67F2 /* AccountingSummaryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */; };
 		88A3F86123EDA6BD007E67F2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86023EDA6BD007E67F2 /* UIView.swift */; };
-		88A3F86623EDAA52007E67F2 /* SummaryTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86523EDAA52007E67F2 /* SummaryTextViewModel.swift */; };
+		88A3F86623EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */; };
 		88A3F86A23EDAD6E007E67F2 /* AccountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F86923EDAD6E007E67F2 /* AccountingViewController.xib */; };
 		88A3F86C23EDAF65007E67F2 /* AccountingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86B23EDAF65007E67F2 /* AccountingTableViewController.swift */; };
 		88A3F86E23EDF963007E67F2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86D23EDF963007E67F2 /* UIColor.swift */; };
@@ -50,11 +50,11 @@
 		88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurboSampleTests.swift; sourceTree = "<group>"; };
 		88A3F84C23ECAFD0007E67F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLauncher.swift; sourceTree = "<group>"; };
-		88A3F85923EDA326007E67F2 /* SummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStackViewController.swift; sourceTree = "<group>"; };
-		88A3F85A23EDA326007E67F2 /* SummaryStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryStackViewController.xib; sourceTree = "<group>"; };
-		88A3F85E23EDA5C4007E67F2 /* SummaryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTextView.swift; sourceTree = "<group>"; };
+		88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryStackViewController.swift; sourceTree = "<group>"; };
+		88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingSummaryStackViewController.xib; sourceTree = "<group>"; };
+		88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryTextView.swift; sourceTree = "<group>"; };
 		88A3F86023EDA6BD007E67F2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		88A3F86523EDAA52007E67F2 /* SummaryTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTextViewModel.swift; sourceTree = "<group>"; };
+		88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryTextViewModel.swift; sourceTree = "<group>"; };
 		88A3F86923EDAD6E007E67F2 /* AccountingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingViewController.xib; sourceTree = "<group>"; };
 		88A3F86B23EDAF65007E67F2 /* AccountingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableViewController.swift; sourceTree = "<group>"; };
 		88A3F86D23EDF963007E67F2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		88A3F85D23EDA408007E67F2 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F85923EDA326007E67F2 /* SummaryStackViewController.swift */,
-				88A3F85A23EDA326007E67F2 /* SummaryStackViewController.xib */,
+				88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */,
+				88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */,
 				88A3F86723EDACA1007E67F2 /* Views */,
 				88A3F86823EDACA5007E67F2 /* ViewModels */,
 			);
@@ -186,7 +186,7 @@
 		88A3F86723EDACA1007E67F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F85E23EDA5C4007E67F2 /* SummaryTextView.swift */,
+				88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 		88A3F86823EDACA5007E67F2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F86523EDAA52007E67F2 /* SummaryTextViewModel.swift */,
+				88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88A3F85C23EDA326007E67F2 /* SummaryStackViewController.xib in Resources */,
+				88A3F85C23EDA326007E67F2 /* AccountingSummaryStackViewController.xib in Resources */,
 				88A3F84023ECAFD0007E67F2 /* LaunchScreen.storyboard in Resources */,
 				88A3F83D23ECAFD0007E67F2 /* Assets.xcassets in Resources */,
 				88A3F86A23EDAD6E007E67F2 /* AccountingViewController.xib in Resources */,
@@ -314,14 +314,14 @@
 				88DFC7FC23EE166F00CB1122 /* NavigationItemConfigurator.swift in Sources */,
 				88DFC7F823EE0D4300CB1122 /* UIViewController.swift in Sources */,
 				88A3F86C23EDAF65007E67F2 /* AccountingTableViewController.swift in Sources */,
-				88A3F85F23EDA5C4007E67F2 /* SummaryTextView.swift in Sources */,
+				88A3F85F23EDA5C4007E67F2 /* AccountingSummaryTextView.swift in Sources */,
 				88A3F86123EDA6BD007E67F2 /* UIView.swift in Sources */,
 				88DFC7FA23EE0D5400CB1122 /* UIBarButtonItem.swift in Sources */,
-				88A3F86623EDAA52007E67F2 /* SummaryTextViewModel.swift in Sources */,
+				88A3F86623EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift in Sources */,
 				88A3F85723EDA0F6007E67F2 /* SceneLauncher.swift in Sources */,
 				88A3F83623ECAFCE007E67F2 /* SceneDelegate.swift in Sources */,
 				88DFC7F623EE087700CB1122 /* AccountingNavigationController.swift in Sources */,
-				88A3F85B23EDA326007E67F2 /* SummaryStackViewController.swift in Sources */,
+				88A3F85B23EDA326007E67F2 /* AccountingSummaryStackViewController.swift in Sources */,
 				88A3F86E23EDF963007E67F2 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

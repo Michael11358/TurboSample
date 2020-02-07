@@ -16,7 +16,7 @@ final class AccountingViewController: UIViewController {
     @IBOutlet private var tableViewContainer : UIView!
      
     // MARK: Properties
-    private lazy var stackViewController = SummaryStackViewController()
+    private lazy var stackViewController = AccountingSummaryStackViewController()
     private lazy var tableViewController = AccountingTableViewController()
 
     // MARK: Setup
