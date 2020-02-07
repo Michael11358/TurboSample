@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountingViewController" customModule="TurboSample" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="Ql5-EN-bfi" id="n53-tZ-Hto"/>
+                <outlet property="stackViewContainer" destination="xGO-ex-WeD" id="xBE-PO-pmD"/>
+                <outlet property="tableViewContainer" destination="9R2-EW-FAk" id="5Tm-G7-MlE"/>
+                <outlet property="view" destination="iN0-l3-epB" id="hXw-KS-0EV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R2-EW-FAk">
+                    <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="xGO-ex-WeD">
+                    <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ql5-EN-bfi">
+                    <rect key="frame" x="16" y="88" width="382" height="32"/>
+                    <segments>
+                        <segment title="Assets"/>
+                        <segment title="Liabilities"/>
+                    </segments>
+                    <connections>
+                        <action selector="didChangeSegmentedControl:" destination="-1" eventType="valueChanged" id="51A-bm-SEf"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9R2-EW-FAk" secondAttribute="trailing" id="13R-75-XVa"/>
+                <constraint firstItem="Ql5-EN-bfi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="3Pm-FH-wm9"/>
+                <constraint firstItem="9R2-EW-FAk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3mc-Va-pY8"/>
+                <constraint firstItem="9R2-EW-FAk" firstAttribute="top" secondItem="Ql5-EN-bfi" secondAttribute="bottom" id="7wU-6q-AYX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xGO-ex-WeD" secondAttribute="trailing" id="DhI-Kq-9lf"/>
+                <constraint firstItem="Ql5-EN-bfi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="MfY-bg-e18"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9R2-EW-FAk" secondAttribute="bottom" id="RnQ-gs-7hM"/>
+                <constraint firstAttribute="bottom" secondItem="xGO-ex-WeD" secondAttribute="bottom" id="qMS-Cg-PyW"/>
+                <constraint firstItem="xGO-ex-WeD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ql2-a2-L3K"/>
+                <constraint firstItem="Ql5-EN-bfi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rNU-pc-rsu"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
