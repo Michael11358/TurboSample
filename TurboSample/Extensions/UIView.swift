@@ -9,6 +9,13 @@
 import UIKit
 
 extension UIView {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get { layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
+    }
+    
     func pin(to view: UIView, with insets: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: insets.left),

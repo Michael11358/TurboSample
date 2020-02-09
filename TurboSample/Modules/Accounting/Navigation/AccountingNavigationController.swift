@@ -12,8 +12,8 @@ final class AccountingNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationBar.shadowImage = UIImage()
-//        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
     }
 }
