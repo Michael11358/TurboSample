@@ -9,7 +9,7 @@
 import UIKit
 
 struct AccountingSummaryTextViewModel {
-    let text: String
+    var text: String
     let height: CGFloat
     let color: UIColor
 }

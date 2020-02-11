@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Sets root view controller of a window retrieved from provided scene
 final class SceneLauncher<ViewController: UIViewController> {
     
     private let scene: UIWindowScene

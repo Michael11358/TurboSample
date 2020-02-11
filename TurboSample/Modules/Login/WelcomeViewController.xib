@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="TurboSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="bAz-PZ-cQk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvt-x3-4Ks">
+                    <rect key="frame" x="20" y="792" width="374" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="xPf-si-h5G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Get Started">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didPressButton:" destination="-1" eventType="touchUpInside" id="VnW-uh-pyx"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-QD-Yy6">
+                    <rect key="frame" x="20" y="365" width="374" height="166"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Ry-P1-44c">
+                            <rect key="frame" x="136.5" y="0.0" width="101" height="100"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TurboSample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0In-Bk-GZj">
+                            <rect key="frame" x="32.5" y="137" width="309" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hsJ-QD-Yy6" secondAttribute="trailing" constant="20" id="5eB-Je-JlE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pvt-x3-4Ks" secondAttribute="trailing" constant="20" id="Gey-KN-2Td"/>
+                <constraint firstItem="Pvt-x3-4Ks" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="IJb-R2-Sjg"/>
+                <constraint firstItem="hsJ-QD-Yy6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ksv-ac-RMP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pvt-x3-4Ks" secondAttribute="bottom" constant="20" id="bzD-Yr-lne"/>
+                <constraint firstItem="hsJ-QD-Yy6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tVz-m7-Dxh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_icon" width="101" height="100"/>
+    </resources>
+</document>

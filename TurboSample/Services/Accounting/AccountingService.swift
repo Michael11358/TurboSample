@@ -8,10 +8,10 @@
 
 import Foundation
 
-class AccountingService {
+final class AccountingService {
  
-    func load(endpoint: EndPoint, completion: @escaping (Result<AccountingTableDefinitionDataModel>) -> Void) {
-        guard let url = endpoint.request else {
+    func load(completion: @escaping (Result<AccountingTableDefinitionDataModel>) -> Void) {
+        guard let url = EndPoint.definition.request else {
             completion(.failure)
             return
         }
@@ -31,11 +31,11 @@ class AccountingService {
     }
  
     enum EndPoint {
-        case definitions
-        case data
         
+        case definition
+       
         var request: URLRequest? {
-            guard let url = URLBuilder(scheme: .https, host: "api.myjson.com", path: "/bins/k1lo8").build() else {
+            guard let url = URLBuilder(scheme: .https, host: "api.myjson.com", path: "/bins/18i6d8").build() else {
                 return nil
             }
             return URLRequestBuilder(url: url, method: .get, headers: [:]).build()

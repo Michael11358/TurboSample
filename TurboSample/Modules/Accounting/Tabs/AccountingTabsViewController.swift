@@ -1,5 +1,5 @@
 //
-//  AccountingTabsController.swift
+//  AccountingTabsViewController.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-09.
@@ -8,10 +8,11 @@
  
 import UIKit
 
-final class AccountingTabsController: UIViewController {
+final class AccountingTabsViewController: UIViewController {
     
     // MARK: Properties
     var selectionHandler: ((_ index: Int) -> Void)?
+    
     private (set) var selected = 0
     
     // MARK: IBOutlets

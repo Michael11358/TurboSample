@@ -36,4 +36,10 @@ final class NavigationItemConfigurator {
         item.title = title
         return self
     }
+    
+    @discardableResult
+    func set(backButtonTitle: String) -> Self {
+        item.backBarButtonItem = .init(title: backButtonTitle, style: .plain, target: nil, action: nil)
+        return self
+    }
 }

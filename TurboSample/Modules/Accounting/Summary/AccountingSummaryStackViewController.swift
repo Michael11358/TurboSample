@@ -16,8 +16,6 @@ final class AccountingSummaryStackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     func set(text: String, at index: Int) {

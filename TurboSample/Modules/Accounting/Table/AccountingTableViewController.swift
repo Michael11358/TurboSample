@@ -13,7 +13,7 @@ final class AccountingTableViewController: UITableViewController {
     // MARK: Properties
     var editingDidEndHandler: ((_ indexPath: IndexPath, _ text: String?) -> Void)?
     
-    var viewModels = [AccountingTableSectionViewModel]()  
+    private (set) var viewModels = [AccountingTableSectionViewModel]()
     
     // MARK: Setup
     override func viewDidLoad() {
@@ -22,6 +22,14 @@ final class AccountingTableViewController: UITableViewController {
         tableView.keyboardDismissMode = .onDrag
         tableView.register(.AccountingTableTextFieldCell, forCellReuseIdentifier: "textFieldCell")
         tableView.register(.AccountingTableSectionHeaderView, forHeaderFooterViewReuseIdentifier: "headerView")
+    }
+    
+    // MARK: Public
+    func set(viewModels: [AccountingTableSectionViewModel], reloadTable: Bool) {
+        self.viewModels = viewModels
+        if reloadTable {
+            tableView.reloadData()
+        }
     }
     
     // MARK: DataSource

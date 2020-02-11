@@ -10,6 +10,7 @@ import Foundation
 
 struct AccountingTableDefinitionDataModel: Codable {
     
+    let version: String
     let tabs: [Tab]
     
     struct Tab: Codable {

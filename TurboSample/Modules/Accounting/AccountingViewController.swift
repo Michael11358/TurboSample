@@ -18,8 +18,9 @@ final class AccountingViewController: UIViewController {
     // MARK: Properties
     private lazy var stackViewController = AccountingSummaryStackViewController()
     private lazy var tableViewController = AccountingTableViewController()
-    private lazy var tabsViewController = AccountingTabsController()
+    private lazy var tabsViewController = AccountingTabsViewController()
     private lazy var dataController = AccountingDataController()
+    private lazy var userObserver = UserObserver()
 
     // MARK: Setup
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ final class AccountingViewController: UIViewController {
         
         NavigationItemConfigurator(item: navigationItem)
             .set(button: .settings(target: self, action: #selector(didPressSettingsButton)), side: .right)
-            .set(title: "Yp, Michael")
+            .set(backButtonTitle: "")
         
         add(child: stackViewController, to: stackViewContainer)
         add(child: tableViewController, to: tableViewContainer)
@@ -35,37 +36,70 @@ final class AccountingViewController: UIViewController {
         
         dataController.load()
         
-        dataController.setupHandler = { [weak self] viewModels in
+        dataController.setupHandler = { [weak self] viewModel in
             guard let self = self else { return }
-            self.tabsViewController.set(tabs: viewModels.map { $0.title })
-            self.tableViewController.viewModels = viewModels[0].sections
-            self.tableViewController.tableView.reloadData()
+            self.tabsViewController.set(tabs: viewModel.tabs.map { $0.title })
+            self.tableViewController.set(viewModels: viewModel.tabs[0].sections, reloadTable: true)
+            
+            for (index, viewModel) in viewModel.summaries.enumerated() {
+                self.stackViewController.insert(viewModel: viewModel, at: index)
+                self.tableViewController.tableView.contentInset.bottom += viewModel.height + 6
+            }
         }
          
-        dataController.updateHandler = { [weak self] viewModels in
+        dataController.updateHandler = { [weak self] viewModel in
             guard let self = self else { return }
             let tab = self.tabsViewController.selected
-            self.tableViewController.viewModels = viewModels[tab].sections
+            self.tableViewController.set(viewModels: viewModel.tabs[tab].sections, reloadTable: false)
+            
+            for (index, viewModel) in viewModel.summaries.enumerated() {
+                self.stackViewController.set(text: viewModel.text, at: index)
+            }
         }
         
-        tabsViewController.selectionHandler = { index in
-            self.tableViewController.viewModels = self.dataController.viewModels[index].sections
-            self.tableViewController.tableView.reloadData()
+        tabsViewController.selectionHandler = { [weak self] index in
+            guard let self = self, let viewModels = self.dataController.viewModel?.tabs[index].sections else { return }
+            self.tableViewController.set(viewModels: viewModels, reloadTable: true)
         }
         
         tableViewController.editingDidEndHandler = { [weak self] indexPath, text in
-            guard let self = self else { return }
+            guard let self = self, let text = text else { return }
             let tab = self.tabsViewController.selected
-            self.dataController.didEndEditingInput(text: text, at: .init(tab: tab, indexPath: indexPath))
+            self.dataController.didEndEditingInput(text: text,tab: tab,section: indexPath.section, row: indexPath.row )
         }
         
-        stackViewController.insert(viewModel: .init(text: "adksaok", height: 50, color: .turboDarkGreen), at: 0)
-        tableViewController.tableView.contentInset.bottom = 70
+        userObserver.observe { [weak self] user in
+            guard let self = self else { return }
+            if let user = user {
+                self.title = "Hello, \(user.name)"
+            } else {
+                self.title = ""
+                
+            }
+        }
+        
+        if AuthenticationController.shared.user == nil {
+            self.present(LoginNavigationController(), animated: true, completion: nil)
+        }
     }
     
     // MARK: Actions
     @objc private func didPressSettingsButton(_ sender: UIBarButtonItem) {
-        
+        sender.isEnabled = false
+        let currency = UserDefaults.standard.string(forKey: "currency") ?? "CAD"
+        let viewController = SettingsViewController(currency: currency)
+        viewController.logoutHandler = { [weak self] in
+            guard let self = self else { return }
+            AuthenticationController.shared.logout()
+            self.present(LoginNavigationController(), animated: true, completion: {
+                self.navigationController?.popViewController(animated: false)
+            })
+        }
+        viewController.currencyChangeHandler = { currency in
+            UserDefaults.standard.set(currency, forKey: "currency")
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+        sender.isEnabled = true
     }
 }
 
