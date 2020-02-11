@@ -27,6 +27,7 @@ final class AccountingDataController {
             case let .success(dataModel):
                 self.tableDefinitionDataModel = dataModel
                 var viewModel = AccountingDataTransformer.viewModel(from: dataModel)
+              
                 self.userInputDataModelController.laod(version: dataModel.version) { userInputDataModel in
                     
                     userInputDataModel?.entries.forEach {
@@ -42,6 +43,7 @@ final class AccountingDataController {
                     self.viewModel = viewModel
                     self.setupHandler?(viewModel)
                 }
+                
             case .failure:
                 // TODO: handle error
                 break

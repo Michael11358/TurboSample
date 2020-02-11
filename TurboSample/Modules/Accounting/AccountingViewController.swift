@@ -34,17 +34,14 @@ final class AccountingViewController: UIViewController {
         add(child: tableViewController, to: tableViewContainer)
         add(child: tabsViewController, to: tabsContainer)
         
-        dataController.load()
-        
         dataController.setupHandler = { [weak self] viewModel in
             guard let self = self else { return }
             self.tabsViewController.set(tabs: viewModel.tabs.map { $0.title })
             self.tableViewController.set(viewModels: viewModel.tabs[0].sections, reloadTable: true)
-            
-            for (index, viewModel) in viewModel.summaries.enumerated() {
-                self.stackViewController.insert(viewModel: viewModel, at: index)
-                self.tableViewController.tableView.contentInset.bottom += viewModel.height + 6
-            }
+            self.stackViewController.set(viewModels: viewModel.summaries)
+            self.tableViewController.tableView.contentInset.bottom = viewModel.summaries.reduce(0, {
+                $0 + $1.height + 6
+            })
         }
          
         dataController.updateHandler = { [weak self] viewModel in
@@ -71,10 +68,10 @@ final class AccountingViewController: UIViewController {
         userObserver.observe { [weak self] user in
             guard let self = self else { return }
             if let user = user {
+                self.dataController.load()
                 self.title = "Hello, \(user.name)"
             } else {
                 self.title = ""
-                
             }
         }
         

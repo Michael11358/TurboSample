@@ -10,7 +10,7 @@ import UIKit
 
 final class AccountingSummaryStackViewController: UIViewController {
     
-    private var views = [Int: AccountingSummaryTextView]()
+    private var views = [AccountingSummaryTextView]()
 
     @IBOutlet private var stackView: UIStackView!
     
@@ -19,17 +19,16 @@ final class AccountingSummaryStackViewController: UIViewController {
     }
     
     func set(text: String, at index: Int) {
-        views[index]?.set(text: text)
+        views[index].set(text: text)
     }
     
-    func insert(viewModel: AccountingSummaryTextViewModel, at index: Int) {
-        let view = AccountingSummaryTextView(viewModel: viewModel)
-        views[index] = view
-        stackView.insertArrangedSubview(view, at: index)
-    }
-    
-    func remove(at index: Int) {
-        views[index]?.removeFromSuperview()
-        views[index] = nil
+    func set(viewModels: [AccountingSummaryTextViewModel]) {
+        views.removeAll()
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        viewModels.forEach {
+            let view = AccountingSummaryTextView(viewModel: $0)
+            views.append(view)
+            stackView.addArrangedSubview(view)
+        }
     }
 }
