@@ -68,6 +68,7 @@ final class SettingsViewController: UITableViewController {
     }
 }
 
+// MARK: - Auxiliary
 extension SettingsViewController {
     
     final class Events {
