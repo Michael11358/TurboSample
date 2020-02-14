@@ -28,7 +28,7 @@ final class AccountingUserInputDataModelController {
     }
     
     func laod(version: String, completion: @escaping (AccountingUserInputDataModel?) -> Void) {
-        fileManagerController.read(path: "\(version)userInput.json") { result in
+        fileManagerController.read(path: "\(version)_userInput.json") { result in
             let dataModel: AccountingUserInputDataModel?
             switch result {
             case let .success(data):
@@ -54,7 +54,7 @@ final class AccountingUserInputDataModelController {
             model.entries.append(.init(value: value, index: index))
         }
         if let data = DataEncoder().encode(model: model) {
-            fileManagerController.write(data: data, path: "\(version)userInput.json")
+            fileManagerController.write(data: data, path: "\(version)_userInput.json")
         }
         self.userInputDataModel = model
     }

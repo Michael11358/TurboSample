@@ -10,6 +10,7 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
+    // MARK: Properties
     private let keyboardObserver = KeyboardObserver()
     
     // MARK: IBOutlets
@@ -32,7 +33,6 @@ final class LoginViewController: UIViewController {
         }
     }
  
- 
     // MARK: IBActions
     @IBAction private func didPressLoginButton(_ sender: UIButton) {
         guard let text = textField.text, !text.isEmptyAndNoSpace else { return }
@@ -41,7 +41,7 @@ final class LoginViewController: UIViewController {
             if success {
                 self?.dismiss(animated: true, completion: nil)
             } else {
-                self?.present(UIAlertController.error(), animated: true, completion: nil)
+                self?.present(UIAlertController.error(message: "Couldn't login"), animated: true, completion: nil)
             }
         }
     }

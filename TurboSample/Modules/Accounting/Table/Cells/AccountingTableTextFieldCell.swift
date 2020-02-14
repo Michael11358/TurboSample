@@ -24,7 +24,7 @@ final class AccountingTableTextFieldCell: UITableViewCell {
     }
     
     // MARK: Public
-    func set(viewModel: AccountingTableTextFieldViewModel) {
+    func set(viewModel: AccountingTableViewModel.RowViewModel) {
         titleLabel.text = viewModel.title
         textField.text = viewModel.text
         textField.placeholder = viewModel.placeholder

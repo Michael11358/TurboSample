@@ -10,9 +10,7 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    
     @IBAction private func didPressButton(_ sender: UIButton) {
         navigationController?.pushViewController(LoginViewController(), animated: true)
     }
-    
 }

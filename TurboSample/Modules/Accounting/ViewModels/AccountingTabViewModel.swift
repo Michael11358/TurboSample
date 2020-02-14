@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct AccountingTabViewModel {
-    let title: String
-    var sections: [AccountingTableSectionViewModel]
+struct AccountingTabsViewModel {
+    
+    var viewModels: [TabViewModel]
+    
+    struct TabViewModel {
+        let title: String
+    }
 }

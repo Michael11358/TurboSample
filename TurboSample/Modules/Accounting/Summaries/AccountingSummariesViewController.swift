@@ -1,5 +1,5 @@
 //
-//  AccountingSummaryStackViewController.swift
+//  AccountingSummariesViewController.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-07.
@@ -8,25 +8,24 @@
 
 import UIKit
 
-final class AccountingSummaryStackViewController: UIViewController {
+final class AccountingSummariesViewController: UIViewController {
     
-    private var views = [AccountingSummaryTextView]()
+    // MARK: Properties
+    private var views = [AccountingSummaryView]()
 
+    // MARK: IBOutlet
     @IBOutlet private var stackView: UIStackView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: Public
     func set(text: String, at index: Int) {
         views[index].set(text: text)
     }
     
-    func set(viewModels: [AccountingSummaryTextViewModel]) {
+    func set(summaries: AccountingSummariesViewModel) {
         views.removeAll()
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        viewModels.forEach {
-            let view = AccountingSummaryTextView(viewModel: $0)
+        summaries.viewModels.forEach {
+            let view = AccountingSummaryView(viewModel: $0)
             views.append(view)
             stackView.addArrangedSubview(view)
         }

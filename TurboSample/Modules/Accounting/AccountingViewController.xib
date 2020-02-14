@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountingViewController" customModule="TurboSample" customModuleProvider="target">
             <connections>
-                <outlet property="stackViewContainer" destination="xGO-ex-WeD" id="xBE-PO-pmD"/>
+                <outlet property="activityIndicator" destination="p41-wI-9YL" id="gEP-IQ-mDp"/>
+                <outlet property="summariesViewContainer" destination="xGO-ex-WeD" id="qIn-eh-Jpp"/>
                 <outlet property="tableViewContainer" destination="9R2-EW-FAk" id="5Tm-G7-MlE"/>
                 <outlet property="tabsContainer" destination="yPG-42-65t" id="1cR-TH-tbT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hXw-KS-0EV"/>
@@ -32,6 +33,10 @@
                     <rect key="frame" x="8" y="88" width="398" height="18"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="p41-wI-9YL">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -40,11 +45,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9R2-EW-FAk" secondAttribute="trailing" id="13R-75-XVa"/>
                 <constraint firstItem="9R2-EW-FAk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3mc-Va-pY8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xGO-ex-WeD" secondAttribute="trailing" id="DhI-Kq-9lf"/>
+                <constraint firstItem="p41-wI-9YL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GY5-jM-xQu"/>
                 <constraint firstItem="yPG-42-65t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="OkK-va-s5W"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9R2-EW-FAk" secondAttribute="bottom" id="RnQ-gs-7hM"/>
                 <constraint firstItem="yPG-42-65t" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vpb-lr-SZ1"/>
                 <constraint firstAttribute="bottom" secondItem="xGO-ex-WeD" secondAttribute="bottom" id="qMS-Cg-PyW"/>
                 <constraint firstItem="xGO-ex-WeD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ql2-a2-L3K"/>
+                <constraint firstItem="p41-wI-9YL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xQ2-Nd-QhR"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

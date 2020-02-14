@@ -1,5 +1,5 @@
 //
-//  AccountingSummaryTextView.swift
+//  AccountingSummaryView.swift
 //  TurboSample
 //
 //  Created by Voline, Michael on 2020-02-07.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-final class AccountingSummaryTextView: UIView {
+final class AccountingSummaryView: UIView {
    
+    // MARK: Properties
     private let label: UILabel = {
         let label = UILabel()
         label.adjustsFontSizeToFitWidth = true
@@ -19,7 +20,8 @@ final class AccountingSummaryTextView: UIView {
         return label
     }()
     
-    init(viewModel: AccountingSummaryTextViewModel) {
+    // MARK: Initialization
+    init(viewModel: AccountingSummariesViewModel.SummaryViewModel) {
         super.init(frame: .zero)
         backgroundColor = viewModel.color
         addSubview(label)
@@ -32,6 +34,7 @@ final class AccountingSummaryTextView: UIView {
         preconditionFailure()
     }
     
+    // MARK: Public
     func set(text: String) {
         label.text = text
     }

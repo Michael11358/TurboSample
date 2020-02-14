@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		88100AAD23F0839B00230409 /* AccountingTabsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88100AAC23F0839B00230409 /* AccountingTabsViewController.xib */; };
 		88100AAF23F0858C00230409 /* AccountingTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AAE23F0858C00230409 /* AccountingTabsViewController.swift */; };
-		88100AB223F0874C00230409 /* AccountingTableSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AB123F0874C00230409 /* AccountingTableSectionViewModel.swift */; };
+		88100AB223F0874C00230409 /* AccountingTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AB123F0874C00230409 /* AccountingTableViewModel.swift */; };
 		88100AB823F0AC4C00230409 /* AccountingUserInputDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AB723F0AC4C00230409 /* AccountingUserInputDataModel.swift */; };
-		88100ABA23F1A4C100230409 /* AccountingDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AB923F1A4C100230409 /* AccountingDataTransformer.swift */; };
+		88100ABA23F1A4C100230409 /* AccountingDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AB923F1A4C100230409 /* AccountingDataFormatter.swift */; };
 		88100ABC23F1A96800230409 /* DataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100ABB23F1A96800230409 /* DataEncoder.swift */; };
 		88100ABE23F1ADB500230409 /* FileManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100ABD23F1ADB500230409 /* FileManagerController.swift */; };
 		88100AC123F1C37300230409 /* AccountingUserInputDataModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AC023F1C37300230409 /* AccountingUserInputDataModelController.swift */; };
-		88100AC323F20C0800230409 /* AccountingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AC223F20C0800230409 /* AccountingViewModel.swift */; };
 		88100AC623F23D3500230409 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AC523F23D3500230409 /* WelcomeViewController.swift */; };
 		88100AC823F23D4000230409 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88100AC723F23D4000230409 /* WelcomeViewController.xib */; };
 		88100ACB23F2DBDC00230409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88100AC923F2DBDC00230409 /* LoginViewController.swift */; };
@@ -47,11 +46,11 @@
 		88A3F84023ECAFD0007E67F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F83E23ECAFD0007E67F2 /* LaunchScreen.storyboard */; };
 		88A3F84B23ECAFD0007E67F2 /* TurboSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */; };
 		88A3F85723EDA0F6007E67F2 /* SceneLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */; };
-		88A3F85B23EDA326007E67F2 /* AccountingSummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */; };
-		88A3F85C23EDA326007E67F2 /* AccountingSummaryStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */; };
-		88A3F85F23EDA5C4007E67F2 /* AccountingSummaryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */; };
+		88A3F85B23EDA326007E67F2 /* AccountingSummariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85923EDA326007E67F2 /* AccountingSummariesViewController.swift */; };
+		88A3F85C23EDA326007E67F2 /* AccountingSummariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F85A23EDA326007E67F2 /* AccountingSummariesViewController.xib */; };
+		88A3F85F23EDA5C4007E67F2 /* AccountingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85E23EDA5C4007E67F2 /* AccountingSummaryView.swift */; };
 		88A3F86123EDA6BD007E67F2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86023EDA6BD007E67F2 /* UIView.swift */; };
-		88A3F86623EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */; };
+		88A3F86623EDAA52007E67F2 /* AccountingSummariesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86523EDAA52007E67F2 /* AccountingSummariesViewModel.swift */; };
 		88A3F86A23EDAD6E007E67F2 /* AccountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F86923EDAD6E007E67F2 /* AccountingViewController.xib */; };
 		88A3F86C23EDAF65007E67F2 /* AccountingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86B23EDAF65007E67F2 /* AccountingTableViewController.swift */; };
 		88A3F86E23EDF963007E67F2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F86D23EDF963007E67F2 /* UIColor.swift */; };
@@ -61,7 +60,6 @@
 		88DFC7FC23EE166F00CB1122 /* NavigationItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC7FB23EE166F00CB1122 /* NavigationItemConfigurator.swift */; };
 		88DFC80023EE1A0C00CB1122 /* AccountingTableTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC7FF23EE1A0C00CB1122 /* AccountingTableTextFieldCell.swift */; };
 		88DFC80223EE1A1C00CB1122 /* AccountingTableTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DFC80123EE1A1C00CB1122 /* AccountingTableTextFieldCell.xib */; };
-		88DFC80523EE1E4900CB1122 /* AccountingTableTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC80423EE1E4900CB1122 /* AccountingTableTextFieldViewModel.swift */; };
 		88DFC80923EE235700CB1122 /* AccountingTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC80823EE235700CB1122 /* AccountingTableSectionHeaderView.swift */; };
 		88DFC80B23EE236400CB1122 /* AccountingTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DFC80A23EE236400CB1122 /* AccountingTableSectionHeaderView.xib */; };
 		88DFC80E23EE280700CB1122 /* AccountingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC80D23EE280700CB1122 /* AccountingDataController.swift */; };
@@ -82,13 +80,12 @@
 /* Begin PBXFileReference section */
 		88100AAC23F0839B00230409 /* AccountingTabsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingTabsViewController.xib; sourceTree = "<group>"; };
 		88100AAE23F0858C00230409 /* AccountingTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTabsViewController.swift; sourceTree = "<group>"; };
-		88100AB123F0874C00230409 /* AccountingTableSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableSectionViewModel.swift; sourceTree = "<group>"; };
+		88100AB123F0874C00230409 /* AccountingTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableViewModel.swift; sourceTree = "<group>"; };
 		88100AB723F0AC4C00230409 /* AccountingUserInputDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingUserInputDataModel.swift; sourceTree = "<group>"; };
-		88100AB923F1A4C100230409 /* AccountingDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingDataTransformer.swift; sourceTree = "<group>"; };
+		88100AB923F1A4C100230409 /* AccountingDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingDataFormatter.swift; sourceTree = "<group>"; };
 		88100ABB23F1A96800230409 /* DataEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncoder.swift; sourceTree = "<group>"; };
 		88100ABD23F1ADB500230409 /* FileManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerController.swift; sourceTree = "<group>"; };
 		88100AC023F1C37300230409 /* AccountingUserInputDataModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingUserInputDataModelController.swift; sourceTree = "<group>"; };
-		88100AC223F20C0800230409 /* AccountingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingViewModel.swift; sourceTree = "<group>"; };
 		88100AC523F23D3500230409 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		88100AC723F23D4000230409 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		88100AC923F2DBDC00230409 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -124,11 +121,11 @@
 		88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurboSampleTests.swift; sourceTree = "<group>"; };
 		88A3F84C23ECAFD0007E67F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLauncher.swift; sourceTree = "<group>"; };
-		88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryStackViewController.swift; sourceTree = "<group>"; };
-		88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingSummaryStackViewController.xib; sourceTree = "<group>"; };
-		88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryTextView.swift; sourceTree = "<group>"; };
+		88A3F85923EDA326007E67F2 /* AccountingSummariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummariesViewController.swift; sourceTree = "<group>"; };
+		88A3F85A23EDA326007E67F2 /* AccountingSummariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingSummariesViewController.xib; sourceTree = "<group>"; };
+		88A3F85E23EDA5C4007E67F2 /* AccountingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryView.swift; sourceTree = "<group>"; };
 		88A3F86023EDA6BD007E67F2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummaryTextViewModel.swift; sourceTree = "<group>"; };
+		88A3F86523EDAA52007E67F2 /* AccountingSummariesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummariesViewModel.swift; sourceTree = "<group>"; };
 		88A3F86923EDAD6E007E67F2 /* AccountingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingViewController.xib; sourceTree = "<group>"; };
 		88A3F86B23EDAF65007E67F2 /* AccountingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableViewController.swift; sourceTree = "<group>"; };
 		88A3F86D23EDF963007E67F2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 		88DFC7FB23EE166F00CB1122 /* NavigationItemConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemConfigurator.swift; sourceTree = "<group>"; };
 		88DFC7FF23EE1A0C00CB1122 /* AccountingTableTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableTextFieldCell.swift; sourceTree = "<group>"; };
 		88DFC80123EE1A1C00CB1122 /* AccountingTableTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingTableTextFieldCell.xib; sourceTree = "<group>"; };
-		88DFC80423EE1E4900CB1122 /* AccountingTableTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableTextFieldViewModel.swift; sourceTree = "<group>"; };
 		88DFC80823EE235700CB1122 /* AccountingTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingTableSectionHeaderView.swift; sourceTree = "<group>"; };
 		88DFC80A23EE236400CB1122 /* AccountingTableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountingTableSectionHeaderView.xib; sourceTree = "<group>"; };
 		88DFC80D23EE280700CB1122 /* AccountingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingDataController.swift; sourceTree = "<group>"; };
@@ -167,8 +163,8 @@
 		88100AB023F0866200230409 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				88100AAC23F0839B00230409 /* AccountingTabsViewController.xib */,
 				88100AAE23F0858C00230409 /* AccountingTabsViewController.swift */,
+				88100AAC23F0839B00230409 /* AccountingTabsViewController.xib */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -176,11 +172,9 @@
 		88100AB323F0876D00230409 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				88100AC223F20C0800230409 /* AccountingViewModel.swift */,
 				88DFC80F23EE286C00CB1122 /* AccountingTabViewModel.swift */,
-				88100AB123F0874C00230409 /* AccountingTableSectionViewModel.swift */,
-				88DFC80423EE1E4900CB1122 /* AccountingTableTextFieldViewModel.swift */,
-				88A3F86523EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift */,
+				88100AB123F0874C00230409 /* AccountingTableViewModel.swift */,
+				88A3F86523EDAA52007E67F2 /* AccountingSummariesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -215,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				88DFC80D23EE280700CB1122 /* AccountingDataController.swift */,
-				88100AB923F1A4C100230409 /* AccountingDataTransformer.swift */,
+				88100AB923F1A4C100230409 /* AccountingDataFormatter.swift */,
 				88100AC023F1C37300230409 /* AccountingUserInputDataModelController.swift */,
 			);
 			path = DataManagment;
@@ -334,14 +328,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		88A3F85D23EDA408007E67F2 /* Summary */ = {
+		88A3F85D23EDA408007E67F2 /* Summaries */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F85923EDA326007E67F2 /* AccountingSummaryStackViewController.swift */,
-				88A3F85A23EDA326007E67F2 /* AccountingSummaryStackViewController.xib */,
+				88A3F85923EDA326007E67F2 /* AccountingSummariesViewController.swift */,
+				88A3F85A23EDA326007E67F2 /* AccountingSummariesViewController.xib */,
 				88A3F86723EDACA1007E67F2 /* Views */,
 			);
-			path = Summary;
+			path = Summaries;
 			sourceTree = "<group>";
 		};
 		88A3F86223EDA6C2007E67F2 /* Extensions */ = {
@@ -376,7 +370,7 @@
 				88DFC80C23EE279700CB1122 /* Navigation */,
 				88100AB023F0866200230409 /* Tabs */,
 				88DFC80623EE22E200CB1122 /* Table */,
-				88A3F85D23EDA408007E67F2 /* Summary */,
+				88A3F85D23EDA408007E67F2 /* Summaries */,
 			);
 			path = Accounting;
 			sourceTree = "<group>";
@@ -384,7 +378,7 @@
 		88A3F86723EDACA1007E67F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F85E23EDA5C4007E67F2 /* AccountingSummaryTextView.swift */,
+				88A3F85E23EDA5C4007E67F2 /* AccountingSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -537,7 +531,7 @@
 				88DFC80B23EE236400CB1122 /* AccountingTableSectionHeaderView.xib in Resources */,
 				88100AC823F23D4000230409 /* WelcomeViewController.xib in Resources */,
 				88100AE623F2ECD800230409 /* SettingsButtonCell.xib in Resources */,
-				88A3F85C23EDA326007E67F2 /* AccountingSummaryStackViewController.xib in Resources */,
+				88A3F85C23EDA326007E67F2 /* AccountingSummariesViewController.xib in Resources */,
 				88A3F84023ECAFD0007E67F2 /* LaunchScreen.storyboard in Resources */,
 				8824218323F0571E00E44A8A /* AccountingTableDefinitions.js in Resources */,
 				88A3F83D23ECAFD0007E67F2 /* Assets.xcassets in Resources */,
@@ -562,16 +556,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88100ACB23F2DBDC00230409 /* LoginViewController.swift in Sources */,
-				88100ABA23F1A4C100230409 /* AccountingDataTransformer.swift in Sources */,
+				88100ABA23F1A4C100230409 /* AccountingDataFormatter.swift in Sources */,
 				88100AC123F1C37300230409 /* AccountingUserInputDataModelController.swift in Sources */,
 				88100AB823F0AC4C00230409 /* AccountingUserInputDataModel.swift in Sources */,
 				88100AEA23F2F9B700230409 /* PickerViewController.swift in Sources */,
 				88A3F83823ECAFCE007E67F2 /* AccountingViewController.swift in Sources */,
-				88DFC80523EE1E4900CB1122 /* AccountingTableTextFieldViewModel.swift in Sources */,
 				88100ABC23F1A96800230409 /* DataEncoder.swift in Sources */,
 				88100AC623F23D3500230409 /* WelcomeViewController.swift in Sources */,
 				8824218B23F0686000E44A8A /* DataModelLoader.swift in Sources */,
-				88100AC323F20C0800230409 /* AccountingViewModel.swift in Sources */,
 				88DFC80E23EE280700CB1122 /* AccountingDataController.swift in Sources */,
 				88A3F83423ECAFCE007E67F2 /* AppDelegate.swift in Sources */,
 				88DFC81023EE286C00CB1122 /* AccountingTabViewModel.swift in Sources */,
@@ -593,19 +585,19 @@
 				88100AD223F2E79600230409 /* UIAlertController.swift in Sources */,
 				88100ABE23F1ADB500230409 /* FileManagerController.swift in Sources */,
 				88100AD023F2E69500230409 /* KeyboardObserver.swift in Sources */,
-				88A3F85F23EDA5C4007E67F2 /* AccountingSummaryTextView.swift in Sources */,
+				88A3F85F23EDA5C4007E67F2 /* AccountingSummaryView.swift in Sources */,
 				88100AD723F2E7EA00230409 /* UserObserver.swift in Sources */,
 				88A3F86123EDA6BD007E67F2 /* UIView.swift in Sources */,
 				88100ADC23F2EBE000230409 /* SettingsViewController.swift in Sources */,
 				88100AE123F2ECC600230409 /* SettingsPickerCell.swift in Sources */,
-				88100AB223F0874C00230409 /* AccountingTableSectionViewModel.swift in Sources */,
+				88100AB223F0874C00230409 /* AccountingTableViewModel.swift in Sources */,
 				88DFC7FA23EE0D5400CB1122 /* UIBarButtonItem.swift in Sources */,
-				88A3F86623EDAA52007E67F2 /* AccountingSummaryTextViewModel.swift in Sources */,
+				88A3F86623EDAA52007E67F2 /* AccountingSummariesViewModel.swift in Sources */,
 				88A3F85723EDA0F6007E67F2 /* SceneLauncher.swift in Sources */,
 				88A3F83623ECAFCE007E67F2 /* SceneDelegate.swift in Sources */,
 				88100ACE23F2E07C00230409 /* LoginNavigationController.swift in Sources */,
 				88DFC7F623EE087700CB1122 /* AccountingNavigationController.swift in Sources */,
-				88A3F85B23EDA326007E67F2 /* AccountingSummaryStackViewController.swift in Sources */,
+				88A3F85B23EDA326007E67F2 /* AccountingSummariesViewController.swift in Sources */,
 				88A3F86E23EDF963007E67F2 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

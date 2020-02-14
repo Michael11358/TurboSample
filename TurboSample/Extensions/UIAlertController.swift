@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIAlertController {
-    static func error(handler: (() -> Void)? = nil) -> UIAlertController {
-        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+    static func error(message: String, handler: (() -> Void)? = nil) -> UIAlertController {
+        let alert = UIAlertController(title: "Oops...", message: message, preferredStyle: .alert)
         let okay = UIAlertAction(title: "Okay", style: .default) { _ in
             handler?()
         }

@@ -13,8 +13,8 @@ final class AccountingTableViewController: UITableViewController {
     // MARK: Properties
     var editingDidEndHandler: ((_ indexPath: IndexPath, _ text: String?) -> Void)?
     
-    private (set) var viewModels = [AccountingTableSectionViewModel]()
-    
+    private var viewModel = AccountingTableViewModel(sections: [])
+
     // MARK: Setup
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,30 +25,33 @@ final class AccountingTableViewController: UITableViewController {
     }
     
     // MARK: Public
-    func set(viewModels: [AccountingTableSectionViewModel], reloadTable: Bool) {
-        self.viewModels = viewModels
-        if reloadTable {
-            tableView.reloadData()
-        }
+    func set(viewModel: AccountingTableViewModel, reloadTable: Bool) {
+        self.viewModel = viewModel
+        if reloadTable { tableView.reloadData() }
     }
     
-    // MARK: DataSource
+    func set(bottomInset: CGFloat) {
+        tableView.contentInset.bottom = bottomInset
+    }
+}
+
+// MARK: DataSource and Delegate
+extension AccountingTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModels.count
+        return viewModel.sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels[section].rows.count
+        return viewModel.sections[section].rows.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "textFieldCell", for: indexPath)
         if let cell = cell as? AccountingTableTextFieldCell {
-            cell.set(viewModel: viewModels[indexPath.section].rows[indexPath.row])
+            cell.set(viewModel: viewModel.sections[indexPath.section].rows[indexPath.row])
             cell.editingDidEndHandler = { [weak self] cell, text in
-                guard let self = self else { return }
-                guard let indexPath = self.tableView.indexPath(for: cell) else { return }
-                self.editingDidEndHandler?(indexPath, text)
+                guard let indexPath = self?.tableView.indexPath(for: cell) else { return }
+                self?.editingDidEndHandler?(indexPath, text)
             }
         }
         return cell
@@ -57,7 +60,7 @@ final class AccountingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerView")
         if let view = view as? AccountingTableSectionHeaderView {
-            view.set(title: viewModels[section].title)
+            view.set(title: viewModel.sections[section].title)
         }
         return view
     }
