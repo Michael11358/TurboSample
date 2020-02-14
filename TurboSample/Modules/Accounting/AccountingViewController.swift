@@ -21,6 +21,7 @@ final class AccountingViewController: UIViewController {
     private lazy var tableViewController = AccountingTableViewController()
     private lazy var tabsViewController = AccountingTabsViewController()
     private lazy var userObserver = UserObserver()
+    private lazy var coordinator = AccountingCoordinator(navigation: navigationController)
     private lazy var dataController: AccountingDataController = {
         let events = AccountingDataController.Events(summariesUpdateHandler: { [weak self] summaries in
             self?.summariesViewController.set(summaries: summaries)
@@ -85,16 +86,16 @@ final class AccountingViewController: UIViewController {
     @objc private func didPressSettingsButton(_ sender: UIBarButtonItem) {
         sender.isEnabled = false
         let currency = UserDefaults.standard.string(forKey: "currency") ?? "CAD"
-        let viewController = SettingsViewController(currency: currency)
-        viewController.logoutHandler = { [weak self] in
+        let events = SettingsViewController.Events(logoutHandler: { [weak self] in
             AuthenticationController.shared.logout()
             self?.present(LoginNavigationController(), animated: true, completion: {
                 self?.navigationController?.popViewController(animated: false)
             })
-        }
-        viewController.currencyChangeHandler = { currency in
+        }, currencyChangeHandler: { currency in
             UserDefaults.standard.set(currency, forKey: "currency")
-        }
+        })
+        
+        let viewController = SettingsViewController(currency: currency, events: events)
         navigationController?.pushViewController(viewController, animated: true)
         sender.isEnabled = true
     }

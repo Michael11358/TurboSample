@@ -24,17 +24,22 @@ final class AccountingService {
             }
         }
     }
+}
+
+// MARK: - Auxiliary
+extension AccountingService {
     
     enum Result<T> {
         case success(T)
         case failure
     }
- 
+    
     enum EndPoint {
         
         case definition
-       
+        
         var request: URLRequest? {
+            // temporary json hoster
             guard let url = URLBuilder(scheme: .https, host: "api.myjson.com", path: "/bins/18i6d8").build() else {
                 return nil
             }

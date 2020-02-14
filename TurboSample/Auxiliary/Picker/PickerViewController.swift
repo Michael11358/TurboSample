@@ -42,14 +42,14 @@ final class PickerViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     // MARK: IBActions
-    @IBAction func didPressSelectButton(_ sender: UIButton) {
+    @IBAction private func didPressSelectButton(_ sender: UIButton) {
         sender.isEnabled = false
         selectionHandler?(pickerView.selectedRow(inComponent: 0))
         dismiss(animated: true, completion: nil)
         sender.isEnabled = true
     }
     
-    @objc func didTap() {
+    @objc private func didTap() {
         dismiss(animated: true, completion: nil)
     }
     

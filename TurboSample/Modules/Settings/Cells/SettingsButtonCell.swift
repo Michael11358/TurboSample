@@ -10,8 +10,10 @@ import UIKit
 
 final class SettingsButtonCell: UITableViewCell {
     
+    // MARK: Properties
     var buttonPressHandler: ((_ cell: UITableViewCell) -> Void)?
     
+    // MARK: IBOutlets
     @IBOutlet private var button: UIButton!
     
     // MARK: Public
@@ -21,9 +23,12 @@ final class SettingsButtonCell: UITableViewCell {
         button.setTitle(viewModel.title, for: .normal)
     }
     
+    // MARK: IBActions
     @IBAction private func didPressButton(_ sender: UIButton) {
+        sender.isEnabled = false
         buttonPressHandler?(self)
-      }
+        sender.isEnabled = true
+    }
 }
 
 // MARK: - UINib Extension
@@ -31,10 +36,4 @@ extension UINib {
     static var SettingsButtonCell: UINib {
         UINib(nibName: "SettingsButtonCell", bundle: .main)
     }
-}
-
-struct SettingsButtonViewModel {
-    let titleColor: UIColor
-    let backgroundColor: UIColor
-    let title: String
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Use this class to subscribe to system keyboard notifications.
 final class KeyboardObserver: NSObject {
     
     var keyboardWillShowHandler: ((_ height: CGFloat) -> Void)?
@@ -29,7 +30,6 @@ final class KeyboardObserver: NSObject {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
     
     @objc private func keyboardWillShow(notification: Notification) {
         let info = notification.userInfo

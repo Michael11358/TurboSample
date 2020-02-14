@@ -10,9 +10,11 @@ import UIKit
 
 final class SettingsPickerCell: UITableViewCell {
 
+    // MARK: IBOutlets
     @IBOutlet private var inputLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
     
+    // MARK: Public
     func set(viewModel: SettingsPickerViewModel) {
         titleLabel.text = viewModel.title
         inputLabel.text = viewModel.input
@@ -24,10 +26,4 @@ extension UINib {
     static var SettingsPickerCell: UINib {
         UINib(nibName: "SettingsPickerCell", bundle: .main)
     }
-}
-
-
-struct SettingsPickerViewModel {
-    let title: String
-    let input: String
 }

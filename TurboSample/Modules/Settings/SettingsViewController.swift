@@ -11,14 +11,13 @@ import UIKit
 final class SettingsViewController: UITableViewController {
     
     // MARK: Properties
-    var logoutHandler: (() -> Void)?
-    var currencyChangeHandler: ((_ currency: String) -> Void)?
-   
+    private let events: Events
     private var currency: String
     
     // MARK: Initialization
-    init(currency: String) {
+    init(currency: String, events: Events) {
         self.currency = currency
+        self.events = events
         super.init(style: .grouped)
     }
     
@@ -48,8 +47,8 @@ final class SettingsViewController: UITableViewController {
         if indexPath.section == 0 {
             return tableView.pickerCell(indexPath: indexPath, viewModel: .init(title: "Select Currency", input: currency))
         } else {
-            return tableView.buttonCell(indexPath: indexPath) { [weak self] in
-                self?.logoutHandler?()
+            return tableView.buttonCell(indexPath: indexPath) { [weak events] in
+                events?.logoutHandler()
             }
         }
     }
@@ -62,11 +61,26 @@ final class SettingsViewController: UITableViewController {
                 guard let self = self else { return }
                 self.currency = data[index]
                 self.tableView.reloadData()
-                self.currencyChangeHandler?(self.currency)
+                self.events.currencyChangeHandler(self.currency)
             }
             present(picker, animated: true, completion: nil)
         }
     }
+}
+
+extension SettingsViewController {
+    
+    final class Events {
+        
+        let logoutHandler: (() -> Void)
+        let currencyChangeHandler: ((String) -> Void)
+        
+        init(logoutHandler: @escaping (() -> Void), currencyChangeHandler: @escaping ((String) -> Void)) {
+            self.logoutHandler = logoutHandler
+            self.currencyChangeHandler = currencyChangeHandler
+        }
+    }
+    
 }
 
 // MARK: - UITableView Extension

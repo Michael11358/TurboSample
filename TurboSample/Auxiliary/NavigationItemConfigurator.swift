@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Use this convinient class to style and configure your viewController's navigationItem.
 final class NavigationItemConfigurator {
     
     private let item: UINavigationItem

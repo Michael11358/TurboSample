@@ -10,7 +10,7 @@ import Foundation
 
 final class UserObserver {
     
-    private var reference: Any?
+    private var reference: NSKeyValueObservation?
     private let authenticationController: AuthenticationController
     
     init(authenticationController: AuthenticationController = .shared) {

@@ -10,12 +10,15 @@ import Foundation
 
 final class FileManagerController {
     
+    // MARK: Properties
     private let fileManager: FileManager
     
+    // MARK: Initialization
     init(fileManager: FileManager = .default) {
         self.fileManager = fileManager
     }
     
+    // MARK: Public
     func write(data: Data, path: String, completion: ((_ success: Bool) -> Void)? = nil) {
         guard let url = fileManager.fileUrl(atPath: path) else {
             completion?(false)
@@ -43,29 +46,31 @@ final class FileManagerController {
     }
     
     func clearAll() {
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        
-        do {
-            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsUrl,
-                                                                       includingPropertiesForKeys: nil,
-                                                                       options: [.skipsHiddenFiles, .skipsSubdirectoryDescendants])
-            for fileURL in fileURLs {
-                try FileManager.default.removeItem(at: fileURL)
-            }
-        } catch  { print(error) }
+        guard let directory = fileManager.documentDirectory else { return }
+        guard let urls = try? fileManager.contentsOfDirectory(at: directory,
+                                                                  includingPropertiesForKeys: nil,
+                                                                  options: [.skipsHiddenFiles, .skipsSubdirectoryDescendants]) else { return }
+        urls.forEach { try? fileManager.removeItem(at: $0) }
     }
-    
+}
+
+// MARK: - Auxiliary
+extension FileManagerController {
     enum Result<T> {
         case success(T)
         case failure
     }
 }
 
+// MARK: - FileManager Extension
 private extension FileManager {
     func fileUrl(atPath path: String) -> URL? {
-        guard var url = urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        url = url.appendingPathComponent(path)
-        return url
+        guard var directory = documentDirectory else { return nil }
+        directory = directory.appendingPathComponent(path)
+        return directory
     }
-  
+    
+    var documentDirectory: URL? {
+        return urls(for: .documentDirectory, in: .userDomainMask).first
+    }
 }

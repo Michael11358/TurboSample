@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// NOTE: this is a pseudo auth mechanism.
 final class AuthenticationController: NSObject {
     
     static let shared = AuthenticationController()
