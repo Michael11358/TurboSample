@@ -2,7 +2,7 @@
 //  AccountingViewController.swift
 //  TurboSample
 //
-//  Created by Voline, Michael on 2020-02-06.
+//  Created by Voline, Michael on 2020-02-13.
 //  Copyright © 2020 MihaVoline. All rights reserved.
 //
 
@@ -30,8 +30,8 @@ final class AccountingViewController: UIViewController {
                 tableViewController?.set(viewModel: table, reloadTable: reload)
             }, tabsUpdateHandler: { [weak tabsViewController] tabs in
                 tabsViewController?.set(tabs: tabs.viewModels.map { $0.title })
-            }, errorUpdateHandler: { [weak self] message in
-                self?.present(UIAlertController.error(message: message), animated: true)
+            }, errorUpdateHandler: { [weak coordinator] message in
+                coordinator?.didThrowError(message: message)
             }, stateUpdateHandler: { [weak activityIndicator] state in
                 switch state {
                 case .normal:
@@ -78,7 +78,7 @@ final class AccountingViewController: UIViewController {
         }
         
         if AuthenticationController.shared.user == nil {
-            self.present(LoginNavigationController(), animated: true, completion: nil)
+            coordinator?.didLogin()
         }
     }
     
@@ -86,17 +86,13 @@ final class AccountingViewController: UIViewController {
     @objc private func didPressSettingsButton(_ sender: UIBarButtonItem) {
         sender.isEnabled = false
         let currency = UserDefaults.standard.string(forKey: "currency") ?? "CAD"
-        let events = SettingsViewController.Events(logoutHandler: { [weak self] in
+        let events = SettingsViewController.Events(logoutHandler: { [weak coordinator] in
             AuthenticationController.shared.logout()
-            self?.present(LoginNavigationController(), animated: true, completion: {
-                self?.navigationController?.popViewController(animated: false)
-            })
+            coordinator?.didLogout()
         }, currencyChangeHandler: { currency in
             UserDefaults.standard.set(currency, forKey: "currency")
         })
-        
-        let viewController = SettingsViewController(currency: currency, events: events)
-        navigationController?.pushViewController(viewController, animated: true)
+        coordinator?.didPressSettings(currency: currency, events: events)
         sender.isEnabled = true
     }
 }
