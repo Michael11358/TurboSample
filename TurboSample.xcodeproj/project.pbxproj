@@ -43,7 +43,7 @@
 		88A3F83623ECAFCE007E67F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F83523ECAFCE007E67F2 /* SceneDelegate.swift */; };
 		88A3F83D23ECAFD0007E67F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F83C23ECAFD0007E67F2 /* Assets.xcassets */; };
 		88A3F84023ECAFD0007E67F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F83E23ECAFD0007E67F2 /* LaunchScreen.storyboard */; };
-		88A3F84B23ECAFD0007E67F2 /* TurboSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */; };
+		88A3F84B23ECAFD0007E67F2 /* AccountingCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F84A23ECAFD0007E67F2 /* AccountingCoordinatorTests.swift */; };
 		88A3F85723EDA0F6007E67F2 /* SceneLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */; };
 		88A3F85B23EDA326007E67F2 /* AccountingSummariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3F85923EDA326007E67F2 /* AccountingSummariesViewController.swift */; };
 		88A3F85C23EDA326007E67F2 /* AccountingSummariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3F85A23EDA326007E67F2 /* AccountingSummariesViewController.xib */; };
@@ -57,6 +57,7 @@
 		88B94B0623F63229008DFD71 /* SettingsPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B94B0523F63229008DFD71 /* SettingsPickerViewModel.swift */; };
 		88B94B0923F633D3008DFD71 /* AccountingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B94B0823F633D3008DFD71 /* AccountingCoordinator.swift */; };
 		88B94B0B23F636BC008DFD71 /* AccountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B94B0A23F636BC008DFD71 /* AccountingViewController.swift */; };
+		88B94B0D23F64315008DFD71 /* AccountingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B94B0C23F64315008DFD71 /* AccountingServiceTests.swift */; };
 		88DFC7F623EE087700CB1122 /* AccountingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC7F523EE087700CB1122 /* AccountingNavigationController.swift */; };
 		88DFC7F823EE0D4300CB1122 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC7F723EE0D4300CB1122 /* UIViewController.swift */; };
 		88DFC7FA23EE0D5400CB1122 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DFC7F923EE0D5400CB1122 /* UIBarButtonItem.swift */; };
@@ -120,7 +121,7 @@
 		88A3F83F23ECAFD0007E67F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88A3F84123ECAFD0007E67F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A3F84623ECAFD0007E67F2 /* TurboSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurboSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurboSampleTests.swift; sourceTree = "<group>"; };
+		88A3F84A23ECAFD0007E67F2 /* AccountingCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingCoordinatorTests.swift; sourceTree = "<group>"; };
 		88A3F84C23ECAFD0007E67F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A3F85623EDA0F6007E67F2 /* SceneLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLauncher.swift; sourceTree = "<group>"; };
 		88A3F85923EDA326007E67F2 /* AccountingSummariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingSummariesViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		88B94B0523F63229008DFD71 /* SettingsPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPickerViewModel.swift; sourceTree = "<group>"; };
 		88B94B0823F633D3008DFD71 /* AccountingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingCoordinator.swift; sourceTree = "<group>"; };
 		88B94B0A23F636BC008DFD71 /* AccountingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingViewController.swift; sourceTree = "<group>"; };
+		88B94B0C23F64315008DFD71 /* AccountingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingServiceTests.swift; sourceTree = "<group>"; };
 		88DFC7F523EE087700CB1122 /* AccountingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingNavigationController.swift; sourceTree = "<group>"; };
 		88DFC7F723EE0D4300CB1122 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		88DFC7F923EE0D5400CB1122 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
@@ -312,7 +314,8 @@
 		88A3F84923ECAFD0007E67F2 /* TurboSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				88A3F84A23ECAFD0007E67F2 /* TurboSampleTests.swift */,
+				88A3F84A23ECAFD0007E67F2 /* AccountingCoordinatorTests.swift */,
+				88B94B0C23F64315008DFD71 /* AccountingServiceTests.swift */,
 				88A3F84C23ECAFD0007E67F2 /* Info.plist */,
 			);
 			path = TurboSampleTests;
@@ -626,7 +629,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88A3F84B23ECAFD0007E67F2 /* TurboSampleTests.swift in Sources */,
+				88B94B0D23F64315008DFD71 /* AccountingServiceTests.swift in Sources */,
+				88A3F84B23ECAFD0007E67F2 /* AccountingCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

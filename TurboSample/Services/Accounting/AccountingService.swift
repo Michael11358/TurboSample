@@ -9,13 +9,21 @@
 import Foundation
 
 final class AccountingService {
+    
+    typealias ModelLoader = DataModelLoader<AccountingTableDefinitionDataModel>
+    
+    private let modelLoader: ModelLoader
+    
+    init(modelLoader: ModelLoader = .init()) {
+        self.modelLoader = modelLoader
+    }
  
     func load(completion: @escaping (Result<AccountingTableDefinitionDataModel>) -> Void) {
         guard let url = EndPoint.definition.request else {
             completion(.failure)
             return
         }
-        DataModelLoader<AccountingTableDefinitionDataModel>().load(request: url) { result in
+        modelLoader.load(request: url) { result in
             switch result {
             case let .success(model):
                 completion(.success(model))

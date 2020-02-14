@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Convers API models to UI models
+/// Converts API models to UI models
 struct AccountingDataFormatter {
     
     static func tabs(from dataModel: AccountingTableDefinitionDataModel) -> AccountingTabsViewModel {

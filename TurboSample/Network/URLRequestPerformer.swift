@@ -10,10 +10,12 @@ import Foundation
 
 final class URLRequestPerformer {
     
-    private let session: URLSession
+    private let session: URLSessionProtocol
+    private let cache: URLCache
  
-    init(session: URLSession = .shared) {
+    init(session: URLSessionProtocol = URLSession.shared, cache: URLCache = .shared) {
         self.session = session
+        self.cache = cache
     }
     
     func perform(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
@@ -30,7 +32,7 @@ final class URLRequestPerformer {
                 }
             case let (_, _, error?):
                 // TODO: Good idea to refactor
-                if let cache = URLCache.shared.cachedResponse(for: request) {
+                if let cache = self.cache.cachedResponse(for: request) {
                     result = .success(cache.data)
                 } else {
                     result = .failure(.client(error: error))
@@ -49,3 +51,9 @@ final class URLRequestPerformer {
         case unknown
     }
 }
+
+protocol URLSessionProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+extension URLSession: URLSessionProtocol {}
